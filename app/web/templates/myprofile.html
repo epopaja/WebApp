@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>This is my account.</h1>
+
+
+  <table border="1" >
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Gender</th>
+        <th>Phone number</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>State</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-lable = "Username"> {{ user.uname}}</td>
+        <td data-label = "First name"> {{ user.fname}}</td>
+        <td data-label = "Last name">{{user.lname }}</td>
+        <td data-label = "Gender">{{ user.gender }}</td>
+        <td data-label = "Phone number">{{ user.phone}}</td>
+        <td data-label = "Address">{{ user.address }}</td>
+        <td data-label = "City">{{ user.city }}</td>
+        <td data-label = "Zipcode">{{ user.zip }}</td>
+        <td data-label = "State">{{ user.state }}</td>
+        <td data-label = "Email">{{ user.email }}</td>
+     </tr>
+    </tbody>
+  </table>
+
+  <a href="{{ url_for('web.update') }}">Update Information</a>
+
+
+{% endblock %}
